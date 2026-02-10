@@ -13,8 +13,6 @@ A simple Python automation project using Selenium -> script automaiton to check 
 
 ## How to run
 1. Install requirements :
-
-    `pip install threading`
     
-    `pip install selenium`
+    `pip install -r requirements.txt`
 2. Run main.py
