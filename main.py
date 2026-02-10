@@ -1,4 +1,3 @@
-import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -80,4 +79,5 @@ if __name__ == "__main__":
     print("Welcome to the Steam Game Price Checker!")
     print("Please enter the Steam game store ID to get the current price.")
     game_id = input()
+
     get_game_price(game_id)
