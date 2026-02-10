@@ -76,6 +76,9 @@ def create_driver():
     options.add_argument("--headless")  # Run in headless mode
     options.add_argument("--blink-settings=imagesEnabled=false") # Disable image loading to speed up page load times
     options.add_argument("--autoplay-policy=user-gesture-required") # Disable autoplay of videos to speed up page load times
+    options.add_argument("--log-level=3") # Suppress unnecessary logging from ChromeDriver (3 = ERROR level, only log errors)
+    options.add_experimental_option("excludeSwitches", ["enable-logging"]) # Suppress unnecessary logging from ChromeDriver
+
     return webdriver.Chrome(options=options)
 
 def dots(stop):
@@ -89,3 +92,4 @@ if __name__ == "__main__":
     print("Please enter the Steam game store ID to get the current price.")
     game_id = input()
     get_game_price(game_id)
+    input("\nPress Enter to exit...")
