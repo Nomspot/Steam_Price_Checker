@@ -73,7 +73,7 @@ def get_game_price(game_id):
 
 def create_driver():
     options = webdriver.ChromeOptions()
-    #options.add_argument("--headless")  # Run in headless mode
+    options.add_argument("--headless")  # Run in headless mode
     options.add_argument("--blink-settings=imagesEnabled=false") # Disable image loading to speed up page load times
     options.add_argument("--autoplay-policy=user-gesture-required") # Disable autoplay of videos to speed up page load times
     return webdriver.Chrome(options=options)
